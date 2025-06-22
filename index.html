@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 COMBO MAQUIAVÉLICO </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: radial-gradient(ellipse at center, #1a0f0f 0%, #0a0505 50%, #000000 100%);
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .floating-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #ff6600;
+            border-radius: 50%;
+            animation: float 8s linear infinite;
+            opacity: 0.1;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.1; }
+            90% { opacity: 0.1; }
+            100% { transform: translateY(-10px) rotate(360deg); opacity: 0; }
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .special-offer-header {
+            background: linear-gradient(135deg, #ff0000, #ff6600, #ff0000);
+            background-size: 200% 200%;
+            animation: gradient-pulse 4s ease-in-out infinite;
+            padding: 25px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 40px;
+            border-radius: 25px;
+            letter-spacing: 1.5px;
+            box-shadow: 0 5px 20px rgba(255, 102, 0, 0.3);
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes gradient-pulse {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes shine-header {
+            0% { transform: rotate(45deg) translateX(-100%); }
+            100% { transform: rotate(45deg) translateX(100%); }
+        }
+
+        .main-headline {
+            font-size: 48px;
+            font-weight: 900;
+            text-align: center;
+            margin: 40px 0;
+            background: linear-gradient(45deg, #ff4400, #ffaa00, #ff6600);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-text 4s ease-in-out infinite;
+            line-height: 1.1;
+            text-shadow: 0 0 20px rgba(255, 68, 0, 0.4);
+            letter-spacing: 2px;
+        }
+
+        @keyframes gradient-text {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .sub-headline {
+            font-size: 24px;
+            text-align: center;
+            color: #ffcc88;
+            margin-bottom: 50px;
+            font-weight: 600;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+            letter-spacing: 1px;
+        }
+
+        .urgency-alert {
+            background: linear-gradient(135deg, #cc0000, #ff3300);
+            border: 2px solid #ffff00;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+            animation: pulse-alert 2s infinite;
+        }
+
+        @keyframes pulse-alert {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 30px rgba(255, 0, 0, 0.5); }
+            50% { transform: scale(1.02); box-shadow: 0 0 40px rgba(255, 0, 0, 0.8); }
+        }
+
+        .urgency-text {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ffff00;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .urgency-subtitle {
+            font-size: 18px;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .countdown-container {
+            background: rgba(0, 0, 0, 0.8);
+            border: 3px solid #ff6600;
+            border-radius: 25px;
+            padding: 40px;
+            text-align: center;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(255, 102, 0, 0.4);
+        }
+
+        .countdown-container::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ff6600, #ff0000, #ff6600);
+            background-size: 200% 200%;
+            animation: border-glow 3s linear infinite;
+            border-radius: 25px;
+            z-index: -1;
+        }
+
+        @keyframes border-glow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .countdown-title {
+            font-size: 28px;
+            color: #ffff00;
+            margin-bottom: 30px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 20px #ff6600;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .countdown-item {
+            background: linear-gradient(135deg, #ff6600, #ff0000);
+            color: white;
+            padding: 30px 25px;
+            border-radius: 20px;
+            min-width: 100px;
+            border: 3px solid #ffff00;
+            box-shadow: 0 8px 25px rgba(255, 102, 0, 0.4);
+            position: relative;
+            transform: perspective(1000px) rotateX(10deg);
+            transition: all 0.3s ease;
+        }
+
+        .countdown-item:hover {
+            transform: perspective(1000px) rotateX(0deg) scale(1.05);
+        }
+
+        .countdown-number {
+            font-size: 36px;
+            font-weight: 900;
+            display: block;
+            color: #ffffff;
+            text-shadow: 0 0 15px #ff0000, 0 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .countdown-label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #ffff00;
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .combo-showcase {
+            background: linear-gradient(135deg, rgba(255, 102, 0, 0.15), rgba(255, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
+            padding: 50px;
+            border-radius: 30px;
+            margin: 50px 0;
+            border: 3px solid #ff6600;
+            box-shadow: 0 20px 60px rgba(255, 102, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .combo-showcase::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            animation: shine-combo 4s infinite;
+        }
+
+        @keyframes shine-combo {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .combo-title {
+            font-size: 36px;
+            color: #ff4400;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 30px rgba(255, 68, 0, 0.8);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 40px 0;
+        }
+
+        .product-card {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 40px;
+            border-radius: 25px;
+            border: 2px solid #ff6600;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 102, 0, 0.1) 0%, transparent 70%);
+            transition: all 0.4s ease;
+            transform: scale(0);
+        }
+
+        .product-card:hover::before {
+            transform: scale(1);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(255, 102, 0, 0.4);
+            border-color: #ffff00;
+        }
+
+        .product-icon {
+            font-size: 60px;
+            margin-bottom: 25px;
+            filter: drop-shadow(0 0 20px #ff6600);
+        }
+
+        .product-name {
+            font-size: 24px;
+            color: #ff6600;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .product-description {
+            color: #e0e0e0;
+            font-size: 16px;
+            line-height: 1.8;
+            font-weight: 500;
+        }
+
+        .power-statement {
+            background: linear-gradient(135deg, #330000, #660000);
+            border: 2px solid #ff0000;
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+            margin: 50px 0;
+            box-shadow: 0 15px 50px rgba(255, 0, 0, 0.3);
+        }
+
+        .power-title {
+            font-size: 28px;
+            color: #ff0000;
+            font-weight: 900;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .power-text {
+            font-size: 20px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+
+        .power-highlight {
+            color: #ffff00;
+            font-weight: 900;
+        }
+
+        .benefits-section {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 50px;
+            border-radius: 25px;
+            margin: 50px 0;
+            border-left: 6px solid #ff6600;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .benefits-title {
+            font-size: 32px;
+            color: #ff6600;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .benefits-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .benefit-item {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 4px solid #ff6600;
+            font-size: 17px;
+            color: #e0e0e0;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            transform: translateX(10px);
+            background: rgba(255, 102, 0, 0.1);
+            box-shadow: 0 5px 20px rgba(255, 102, 0, 0.3);
+        }
+
+        .benefit-icon {
+            color: #ff6600;
+            margin-right: 15px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .testimonials {
+            margin: 50px 0;
+        }
+
+        .testimonials-title {
+            font-size: 32px;
+            color: #ff6600;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .testimonial {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 35px;
+            border-radius: 20px;
+            margin: 30px 0;
+            border-left: 4px solid #ff6600;
+            font-style: italic;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 60px;
+            color: #ff6600;
+            opacity: 0.3;
+            font-family: serif;
+        }
+
+        .testimonial-text {
+            font-size: 18px;
+            color: #e0e0e0;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-weight: 500;
+            padding-left: 40px;
+        }
+
+        .testimonial-author {
+            color: #ff6600;
+            font-weight: 900;
+            font-style: normal;
+            font-size: 16px;
+            text-align: right;
+        }
+
+        .testimonial-profession {
+            color: #ffaa00;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 14px;
+            text-align: right;
+            margin-top: 5px;
+        }
+
+        .price-section {
+            background: linear-gradient(135deg, #2a0a00, #4d1100, #2a0a00);
+            border: 3px solid #ff6600;
+            border-radius: 30px;
+            padding: 50px;
+            text-align: center;
+            margin: 50px 0;
+            box-shadow: 0 20px 60px rgba(255, 102, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .price-section::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ff6600, #ff0000, #ff6600);
+            background-size: 200% 200%;
+            animation: border-glow 3s linear infinite;
+            border-radius: 30px;
+            z-index: -1;
+        }
+
+        .value-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .value-item {
+            padding: 30px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .individual-price {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid #666;
+            position: relative;
+        }
+
+        .individual-price::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            right: 10%;
+            height: 3px;
+            background: #ff0000;
+            transform: translateY(-50%) rotate(-15deg);
+        }
+
+        .combo-price {
+            background: linear-gradient(135deg, #ff6600, #ff0000);
+            border: 3px solid #ffff00;
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(255, 102, 0, 0.6);
+            animation: price-glow 2s infinite alternate;
+        }
+
+        @keyframes price-glow {
+            0% { box-shadow: 0 15px 40px rgba(255, 102, 0, 0.6); }
+            100% { box-shadow: 0 20px 50px rgba(255, 102, 0, 0.9); }
+        }
+
+        .price-label {
+            font-size: 16px;
+            color: #ccc;
+            margin-bottom: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .price-value {
+            font-size: 28px;
+            font-weight: 900;
+            color: #fff;
+        }
+
+        .combo-price .price-value {
+            font-size: 40px;
+            color: #ffff00;
+            text-shadow: 0 0 20px #ff6600;
+        }
+
+        .savings {
+            background: linear-gradient(45deg, #00ff00, #00cc00);
+            color: #000;
+            padding: 20px;
+            border-radius: 15px;
+            font-weight: 900;
+            margin: 30px 0;
+            font-size: 22px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 30px rgba(0, 255, 0, 0.4);
+            animation: savings-pulse 2s infinite;
+        }
+
+        @keyframes savings-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .payment-info {
+            font-size: 18px;
+            color: #ffaa00;
+            margin: 20px 0;
+            font-weight: 600;
+        }
+
+        .guarantee {
+            background: linear-gradient(45deg, #ffaa00, #ffcc00);
+            color: #000;
+            padding: 25px;
+            border-radius: 15px;
+            font-weight: 900;
+            margin: 30px 0;
+            font-size: 18px;
+            box-shadow: 0 10px 30px rgba(255, 170, 0, 0.4);
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #ff6600, #ff0000);
+            color: white;
+            padding: 30px 60px;
+            font-size: 26px;
+            font-weight: 900;
+            border: 3px solid #ffff00;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 102, 0, 0.4);
+            margin: 30px 0;
+            letter-spacing: 2px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(255, 102, 0, 0.6);
+        }
+
+        .decline-section {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            border: 1px solid #333;
+        }
+
+        .decline-text {
+            color: #999;
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .decline-button {
+            background: transparent;
+            color: #666;
+            padding: 15px 30px;
+            font-size: 14px;
+            border: 2px solid #666;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .decline-button:hover {
+            color: #888;
+            border-color: #888;
+            transform: scale(0.95);
+        }
+
+        .final-warning {
+            background: rgba(255, 0, 0, 0.15);
+            border: 2px solid #ff0000;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 40px 0;
+            font-size: 18px;
+            color: #ff6600;
+            font-weight: 900;
+            animation: warning-pulse 2s infinite;
+        }
+
+        @keyframes warning-pulse {
+            0%, 100% { border-color: #ff0000; box-shadow: 0 0 20px rgba(255, 0, 0, 0.3); }
+            50% { border-color: #ff6600; box-shadow: 0 0 30px rgba(255, 102, 0, 0.5); }
+        }
+
+        @media (max-width: 768px) {
+            .main-headline { font-size: 32px; }
+            .countdown { flex-wrap: wrap; gap: 20px; }
+            .countdown-item { min-width: 80px; padding: 25px 20px; }
+            .countdown-number { font-size: 28px; }
+            .combo-title { font-size: 28px; }
+            .products-grid { grid-template-columns: 1fr; }
+            .benefits-list { grid-template-columns: 1fr; }
+            .value-comparison { grid-template-columns: 1fr; gap: 15px; }
+            .combo-price { transform: none; margin-top: 20px; }
+            .container { padding: 15px; }
+            .special-offer-header { font-size: 16px; padding: 20px; }
+            .sub-headline { font-size: 18px; }
+            .countdown-title { font-size: 22px; }
+        }
+
+        @media (max-width: 480px) {
+            .main-headline { font-size: 26px; }
+            .countdown-item { min-width: 70px; padding: 20px 15px; }
+            .countdown-number { font-size: 24px; }
+            .cta-button { padding: 25px 40px; font-size: 20px; }
+            .power-text { font-size: 16px; }
+            .testimonial-text { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-particles" id="particles"></div>
+    
+    <div class="container">
+        <div class="special-offer-header">
+            🔥 OFERTA EXCLUSIVA DESBLOQUEADA - Apenas para quem demonstrou estar PRONTO para o poder real
+        </div>
+
+        <h1 class="main-headline">
+            COMBO MAQUIAVÉLICO<br>
+            O Arsenal Definitivo do Poder Mental
+        </h1>
+
+        <p class="sub-headline">
+            Enquanto outros permanecem como marionetes, você terá o controle ABSOLUTO de qualquer situação
+        </p>
+
+        <div class="urgency-alert">
+            <div class="urgency-text">⚠️ ÚLTIMO AVISO ⚠️</div>
+            <div class="urgency-subtitle">
+                A cada segundo que passa, você está perdendo oportunidades de controlar sua vida. 
+                <strong>Pessoas comuns continuarão sendo manipuladas enquanto você hesita.</strong>
+            </div>
+        </div>
+
+        <div class="countdown-container">
+            <div class="countdown-title">⏰ SEU TEMPO ESTÁ ACABANDO:</div>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">14</span>
+                    <span class="countdown-label">MIN</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">59</span>
+                    <span class="countdown-label">SEG</span>
+                </div>
+            </div>
+            <div style="color: #ffff00; font-size: 16px; font-weight: bold; margin-top: 20px;">
+                Depois disso, você volta a ser apenas mais um na multidão...
+            </div>
+        </div>
+
+        <div class="power-statement">
+            <h3 class="power-title">🎯 A VERDADE BRUTAL</h3>
+            <p class="power-text">
+                Enquanto você lê isso, <span class="power-highlight">milhares de pessoas estão sendo manipuladas NESTE EXATO MOMENTO</span> por quem possui essas técnicas.
+            </p>
+            <p class="power-text">
+                Você pode continuar sendo uma marionete... <span class="power-highlight">OU se tornar o mestre dos fios.</span>
+            </p>
+            <p class="power-text">
+                <span class="power-highlight">A escolha é sua. Mas ela expira em minutos.</span>
+            </p>
+        </div>
+
+        <div class="combo-showcase">
+            <h2 class="combo-title">🔥 ARSENAL COMPLETO DE DOMINAÇÃO</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">🧠</div>
+                    <div class="product-name">PODER & MANIPULAÇÃO</div>
+                    <div class="product-description">
+                        As técnicas secretas que CEOs, políticos e líderes mundiais usam para controlar mentes e moldar decisões. 
+                        <strong>Métodos proibidos de persuasão instantânea</strong> que funcionam até mesmo nos mais resistentes.
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🕵️</div>
+                    <div class="product-name">MANUAL SECRETO DO FBI</div>
+                    <div class="product-description">
+                        Protocolos CLASSIFICADOS de interrogatório e análise comportamental. 
+                        <strong>Detecte mentiras em segundos</strong> e extraia a verdade de qualquer pessoa, 
+                        mesmo quando ela tenta esconder.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="benefits-section">
+            <h3 class="benefits-title">O QUE VOCÊ DOMINARÁ COM ESTE ARSENAL:</h3>
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <span class="benefit-icon">▶</span>
+                    Controle absoluto em qualquer negociação ou conversa - Você nunca mais sairá perdendo em uma discussão, seja no trabalho, em relacionamentos ou negócios. Aprenderá a conduzir qualquer pessoa exatamente para onde você quer que ela vá.
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">▶</span>
+                    Detecção instantânea de mentiras e manipulações - Desenvolva a capacidade sobrenatural de identificar quando alguém está mentindo através de micro-expressões faciais, tom de voz e linguagem corporal. Ninguém mais conseguirá te enganar.
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">▶</span>
+                    Domínio completo da linguagem corporal - Leia pessoas como livros abertos e projete exatamente a imagem que você quer. Saiba quando alguém está interessado, com medo, mentindo ou escondendo algo importante de você.
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">▶</span>
+                    Técnicas de influência instantânea usadas por agentes secretos - Métodos psicológicos avançados para fazer qualquer pessoa concordar com você, mesmo quando ela inicialmente discorda. Persuasão no nível mais profundo da mente humana.
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">▶</span>
+                    Estratégias de interrogatório do FBI adaptadas para a vida real - Técnicas profissionais para extrair informações valiosas de qualquer pessoa, descobrir segredos e fazer as pessoas revelarem muito mais do que pretendiam.
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">▶</span>
+                    Vantagem competitiva devastadora em todas as áreas da vida - No trabalho, você será promovido mais rápido. Nos relacionamentos, terá controle total. Nos negócios, sempre sairá ganhando. Essa é a diferença entre líderes e liderados.
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonials">
+            <h3 class="testimonials-title">VEJA O QUE ACONTECE QUANDO VOCÊ DOMINA ESSAS TÉCNICAS:</h3>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">
+                    Trabalho na área psicológica há mais de 12 anos e achei que já conhecia todas as técnicas de persuasão e análise comportamental. Estava completamente errada. Esses materiais me mostraram métodos que eu nunca havia visto na faculdade ou em qualquer curso profissional. A combinação das técnicas de manipulação com os protocolos do FBI criou uma sinergia incrível. Agora consigo ler meus pacientes em um nível muito mais profundo e ajudá-los de forma mais eficaz. Nas minhas relações pessoais, também percebo quando alguém não está sendo sincero comigo. É como ter desenvolvido um sexto sentido para a natureza humana.
+                </p>
+                <p class="testimonial-author">Maria Alice Araújo</p>
+                <p class="testimonial-profession">Psicóloga Clínica</p>
+            </div>
+
+            <div class="testimonial">
+                <p class="testimonial-text">
+                    Como engenheiro civil, sempre fui uma pessoa mais técnica e tinha dificuldades nas negociações com clientes e fornecedores. Sempre saía no prejuízo porque não sabia como conduzir as conversas. Depois de aplicar essas técnicas, minha empresa cresceu 300% em um ano. Aprendi a identificar quando os fornecedores estavam tentando me passar a perna e como convencer clientes a aceitar meus orçamentos sem questionamentos. O mais impressionante é que agora consigo fechar contratos muito maiores porque sei exatamente como apresentar meus projetos e quais pontos psicológicos tocar em cada tipo de cliente. Virei referência na minha cidade.
+                </p>
+                <p class="testimonial-author">Diego Aparecido de Oliveira</p>
+                <p class="testimonial-profession">Engenheiro Civil</p>
+            </div>
+
+            <div class="testimonial">
+                <p class="testimonial-text">
+                    Na medicina, especialmente lidando com pacientes em situações delicadas, sempre precisei desenvolver técnicas para que eles me contassem a verdade sobre seus sintomas e hábitos. Muitos pacientes mentem ou omitem informações cruciais, o que pode comprometer o diagnóstico. Com as técnicas do FBI que aprendi nesses materiais, agora consigo identificar imediatamente quando um paciente está escondendo algo importante. Além disso, as estratégias de persuasão me ajudam a convencer pacientes resistentes a seguirem o tratamento adequado. Minha taxa de sucesso nos tratamentos aumentou drasticamente porque agora tenho acesso às informações reais e consigo motivar melhor meus pacientes.
+                </p>
+                <p class="testimonial-author">Luciana de Araújo Peçanha</p>
+                <p class="testimonial-profession">Médica</p>
+            </div>
+        </div>
+
+        <div class="price-section">
+            <div class="value-comparison">
+                <div class="value-item individual-price">
+                    <div class="price-label">PODER & MANIPULAÇÃO</div>
+                    <div class="price-value">R$ 35</div>
+                </div>
+                <div class="value-item individual-price">
+                    <div class="price-label">MANUAL DO FBI</div>
+                    <div class="price-value">R$ 62</div>
+                </div>
+                <div class="value-item combo-price">
+                    <div class="price-label">COMBO COMPLETO</div>
+                    <div class="price-value">R$ 24,90</div>
+                </div>
+            </div>
+
+            <div class="savings">
+                VOCÊ ECONOMIZA + DE R$ 72 COM ESTE COMBO EXCLUSIVO
+            </div>
+
+            <div class="payment-info">ou 5x de R$ 5,85 no cartão</div>
+            
+            <div class="guarantee">
+                GARANTIA TOTAL DE 7 DIAS: Teste todo o conteúdo. Se não ficar completamente satisfeito, devolvemos 100% do seu investimento. Sem perguntas, sem complicações.
+            </div>
+            
+            <a href="https://pay.cakto.com.br/v4zayow_441128" class="cta-button">
+                QUERO DOMINAR MENTES AGORA
+            </a>
+        </div>
+
+        <div class="decline-section">
+            <p class="decline-text">
+                Esta oferta não estará disponível depois que você sair desta página
+            </p>
+            <a href="https://dxxdu09.github.io/Poder-e-manipulacao/" class="decline-button">
+                Não, obrigado. Prefiro continuar sendo manipulado pelos outros
+            </a>
+        </div>
+
+        <div class="final-warning">
+            ATENÇÃO: Esta é uma oferta única e exclusiva. Depois que o timer zerar, você não terá mais acesso a estes materiais por este preço. A diferença entre quem tem poder e quem é controlado são exatamente estas técnicas.
+        </div>
+    </div>
+
+    <script>
+        // Criar partículas flutuantes
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 15; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 8 + 's';
+                particle.style.animationDuration = (Math.random() * 4 + 6) + 's';
+                container.appendChild(particle);
+            }
+        }
+
+        let timeLeft = 15 * 60; // 15 minutes
+
+        function updateCountdown() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            
+            if (timeLeft <= 0) {
+                document.querySelector('.countdown-container').innerHTML = `
+                    <div style="color: #ff6600; font-size: 28px; font-weight: bold;">
+                        OFERTA EXPIRADA
+                    </div>
+                    <div style="font-size: 18px; color: #ccc; margin-top: 20px;">
+                        Você perdeu sua chance de ter controle total sobre sua vida
+                    </div>
+                `;
+                
+                const button = document.querySelector('.cta-button');
+                button.style.background = '#666';
+                button.style.cursor = 'not-allowed';
+                button.onclick = function(e) { e.preventDefault(); return false; };
+                button.textContent = 'OFERTA EXPIRADA';
+                
+                return;
+            }
+            
+            timeLeft--;
+        }
+
+        // Inicializar
+        createParticles();
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
